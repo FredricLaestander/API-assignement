@@ -14,8 +14,8 @@ return new class extends Migration
     {
         Schema::create("chat_histories", function (Blueprint $table) {
             $table->id();
-            $table->string("user_message");
-            $table->string("bot_response");
+            $table->text("user_message");
+            $table->text("bot_response");
             $table->string("session_id");
             $table->foreignIdFor(User::class);
             $table->timestamps();
